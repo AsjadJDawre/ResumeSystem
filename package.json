@@ -19,6 +19,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.19.1",
-    "openai": "^4.20.1"
+    "openai": "^4.20.1",
+    "pdfkit": "^0.17.2"
   }
 }
