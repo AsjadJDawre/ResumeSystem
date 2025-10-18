@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: resumesys-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ResumeSys
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: .
+    container_name: resumesys-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Provide sane defaults; .env can override
+      PORT: ${PORT:-5000}
+      DB_URL: ${DB_URL:-mongodb://mongo:27017}
+      DB_Name: ${DB_Name:-ResumeSys}
+      JWT_SECRET: ${JWT_SECRET:-changeme}
+    ports:
+      - "5000:5000"
+    depends_on:
+      mongo:
+        condition: service_started
+    healthcheck:
+      test: ["CMD-SHELL", "node -e 'require(\"dns\").resolve(\"mongo\",()=>process.exit(0))' "]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  mongo_data:
+
+
+
+
