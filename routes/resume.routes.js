@@ -29,6 +29,6 @@ router.put("/education", verifyJWT, updateEducation); // Update education array
 router.put("/experience", verifyJWT, updateExperience); // Update experience array
 
 // PDF Export
-router.get("/:id/pdf", verifyJWT, generatePDF); // Generate and download resume PDF
+router.get("/pdf", verifyJWT, generatePDF); // Generate and download resume PDF
 
 export default router;
