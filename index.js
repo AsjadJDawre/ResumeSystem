@@ -1,10 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { databaseConfig } from "./DB/database-config.js";
-
 import { errorMiddleware } from "./middlewares/error.middleware.js";
+
 
 // Route Imports
 import authRoutes from "./routes/auth.routes.js";
@@ -14,7 +15,6 @@ import resumeRoutes from "./routes/resume.routes.js";
 import skillRoutes from "./routes/skill.routes.js";
 import verifyRoutes from "./routes/verify.routes.js";
 
-dotenv.config();
 const app = express();
 const allowedOrigins = ["http://localhost:5173"]; 
 
