@@ -2,11 +2,17 @@
 
 Build modern resumes programmatically. This backend provides secure authentication, CRUD for projects/achievements/skills, automatic resume maintenance, verification of items, and insights—all powered by Node.js, Express, and MongoDB.
 
+> ⚠️ **Note:** All API endpoints expect request bodies in **JSON format**.  
+> Use Postman (or any API client) → Body → `raw` → `JSON` when testing.
+
 ### Key Features
 - **JWT auth**: Register/Login with hashed passwords and stateless tokens
 - **Modular CRUD**: Projects, Achievements, Skills with verification flags
 - **Auto-maintained Resume**: `Resume` embeds arrays of references and updates on every change
+- **AI Summary Generator**: OpenRouter-powered professional summary generation based on user data
+- **PDF Resume Export**: Generate professional, ATS-friendly resume PDFs with dynamic content
 - **Analytics/Insights**: Quick stats of verified/unverified items per user
+- **Resource Optimization**: Prevents server waste by validating data before processing
 - **Robust DX**: `ApiError`, `ApiResponse`, and `asyncHandler` for clean APIs
 
 ---
@@ -21,8 +27,15 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - [Error and Response Handling](#error-and-response-handling)
 - [Verification System](#verification-system)
 - [Resume Insights Endpoint](#resume-insights-endpoint)
+- [PDF Resume Export](#pdf-resume-export)
 - [Future Scope](#future-scope)
 - [Setup and Run](#setup-and-run)
+
+---
+
+## 📘 Related Documentation
+- [AI Summary Generation Guide](./docs/ai-summary-generator.md): Detailed explanation of how AI-based summary generation works, request/response structures, and common pitfalls.
+- [System Architecture & Workflow](./docs/system-architecture.md): Visual explanation of backend architecture, data flow, and system components.
 
 ---
 
@@ -37,6 +50,8 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - Projects/Achievements/Skills: CRUD with `verified` flags
 - Verification: Role-protected endpoint to mark items verified
 - Insights: Aggregated counts (verified/unverified)
+- AI Summary: OpenRouter-powered professional summary generation
+- PDF Export: Professional resume PDF generation with dynamic content
 
 ---
 
@@ -131,6 +146,8 @@ erDiagram
 ### API Endpoints
 Base URL: `/api`
 
+> 🎯 **API Design Note**: All endpoints follow RESTful conventions with consistent HTTP methods and resource-based URIs. The same resource (e.g., `/achievements`) is accessed via different HTTP methods (GET, POST, PUT, DELETE) rather than using confusing endpoint names like `get-achievement` or `update-achievement`. This makes the API intuitive and follows industry standards.
+
 Authentication
 - POST `/auth/register`
   - Headers: `Content-Type: application/json`
@@ -182,10 +199,13 @@ Skills (requires auth)
 
 Resume (requires auth)
 - GET `/resume` — returns populated resume (projects, achievements, skills)
-- PUT `/resume/summary` — `{ "summary": "..." }`
+- PUT `/resume/summary` — `{ "summary": "..." }` (manual update)
+- POST `/resume/generate-summary` — AI-generated summary based on user data
+- POST `/resume/preview-summary` — preview AI summary without saving
 - PUT `/resume/education` — `{ "education": [ {"institute":"...","degree":"...","startYear":2022,"endYear":2026} ] }`
 - PUT `/resume/experience` — `{ "experience": [ {"title":"SWE Intern","company":"X","duration":"Jun-Sep","description":"..."} ] }`
 - GET `/resume/stats` — insights of verified/unverified counts
+- GET `/resume/pdf` — generate and download professional resume PDF
 
 Verification (requires auth; typically elevated role)
 - PUT `/verify/:type/:id` — `type` in `[project, achievement, skill, course]`
@@ -279,10 +299,54 @@ Endpoint: `GET /api/resume/stats`
 
 ---
 
+### PDF Resume Export
+
+> 📸 **Image Quality Note**: If images appear unclear or low quality in the README, please view them directly in the `docs/test_output/` folder for better resolution.
+
+The system includes a professional PDF resume generator that creates ATS-friendly, industry-standard resume PDFs with dynamic content based on user data.
+
+**Endpoint**: `GET /api/resume/pdf`
+
+**Features**:
+- **Professional Layout**: Clean, ATS-friendly design with proper typography
+- **Dynamic Content**: Automatically populates with user's resume data
+- **Section Order**: SUMMARY → TECHNICAL SKILLS → EXPERIENCE → PROJECTS → EDUCATION → ACHIEVEMENTS
+- **Smart Project Selection**: Shows top 2 projects (prioritizes verified, then by date)
+- **Graceful Data Handling**: Shows "Not Available" for empty sections, skips optional sections entirely
+- **Resource Optimization**: Validates sufficient data before processing to prevent server waste
+
+**Sample Generated PDF**:
+
+> 📸 **Image Quality Note**: If images appear unclear or low quality in the README, please view them directly in the `docs/test_output/` folder for better resolution.
+
+![Professional Resume PDF Sample](./docs/test_output/pdf-generated-output.png)
+
+**Usage Example(OR Use POSTMAN Preferred)**:
+```bash
+# Generate and download resume PDF
+curl -s -b cookiejar.txt -X GET http://localhost:5000/api/resume/pdf \
+  -o "my-resume.pdf"
+```
+
+**Response Headers**:
+- `Content-Type: application/pdf`
+- `Content-Disposition: attachment; filename="resume_User_Name.pdf"`
+
+**Error Handling**:
+- **Insufficient Data**: Returns helpful message with guidance on required fields
+- **Authentication**: Requires valid JWT token from httpOnly cookie
+- **Security**: Users can only generate their own resume PDF
+
+**Insufficient Data Response**:
+![PDF Generation - Insufficient Data](./docs/test_output/insufficient-info-ForPDFGen.png)
+
+---
+
 ### Future Scope
-- AI-generated resume summary and skills extraction
+- Enhanced AI-generated resume summary with multiple templates
 - Integrations: Udemy, Coursera, Hackathons, GitHub activity
-- Resume export: PDF generator and templates
+- PDF template customization and multiple layouts
+- Advanced analytics and insights dashboard
 
 ---
 
@@ -303,6 +367,7 @@ PORT=5000
 DB_URL=mongodb://localhost:27017
 DB_Name=resumesys
 JWT_SECRET=supersecretkey
+OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
 Run
@@ -323,6 +388,10 @@ Testing with Postman / curl (cookies)
 
     # Authenticated request (sends cookie)
     curl -s -b cookiejar.txt http://localhost:5000/api/projects
+    
+    # Generate and download resume PDF
+    curl -s -b cookiejar.txt -X GET http://localhost:5000/api/resume/pdf \
+      -o "my-resume.pdf"
     ```
 
 ---
