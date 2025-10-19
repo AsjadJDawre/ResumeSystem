@@ -24,12 +24,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/projects",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/projects",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"projects"
@@ -53,16 +54,17 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/projects/68f451b5413264399ef18d93",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/projects/68f47aceda3df5d8e518879f",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"projects",
-								"68f451b5413264399ef18d93"
+								"68f47aceda3df5d8e518879f"
 							]
 						}
 					},
@@ -74,12 +76,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/projects/<To.Be-deleted's-ID>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/projects/<To.Be-deleted's-ID>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"projects",
@@ -95,12 +98,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/projects",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/projects",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"projects"
@@ -129,12 +133,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/achievements",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/achievements",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"achievements"
@@ -158,12 +163,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/achievements/<To.Be-Update's-ID>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/achievements/<To.Be-Update's-ID>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"achievements",
@@ -179,12 +185,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/achievements",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/achievements",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"achievements"
@@ -199,12 +206,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/achievements/<To.Be-deleted's-ID>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/achievements/<To.Be-deleted's-ID>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"achievements",
@@ -229,17 +237,18 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/verify/<type:project,achievement,skill>/<68f21aa72e0d241acc0cbddf-Id for that type particular doc>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/verify/<type:project,achievement,skill>/<-Id for that type particular doc>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"verify",
 								"<type:project,achievement,skill>",
-								"<68f21aa72e0d241acc0cbddf-Id for that type particular doc>"
+								"<-Id for that type particular doc>"
 							]
 						}
 					},
@@ -265,12 +274,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/skills",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/skills",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"skills"
@@ -294,12 +304,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/skills/<To.Be-Updated's-ID>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/skills/<To.Be-Updated's-ID>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"skills",
@@ -315,12 +326,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/skills",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/skills",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"skills"
@@ -335,12 +347,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/skills/<To.Be-deleted's-ID>",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/skills/<To.Be-deleted's-ID>",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"skills",
@@ -368,12 +381,13 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/resume",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume"
@@ -397,12 +411,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/resume/summary",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/summary",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -427,12 +442,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/resume/education",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/education",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -457,12 +473,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/resume/experience",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/experience",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -478,12 +495,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/resume/stats",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/stats",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -499,23 +517,17 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/resume/generate-summary",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/generate-summary",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
 								"generate-summary"
-							],
-							"query": [
-								{
-									"key": "count",
-									"value": "5",
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -527,12 +539,13 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/resume/preview-summary",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/preview-summary",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -553,12 +566,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/resume/pdf",
-							"protocol": "http",
+							"raw": "https://resumesystem.onrender.com/api/resume/pdf",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"resumesystem",
+								"onrender",
+								"com"
 							],
-							"port": "5000",
 							"path": [
 								"api",
 								"resume",
@@ -577,7 +591,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Final Test\",\r\n    \"email\": \"Final456@gmail.com\",\r\n    \"password\": \"Asjad@123\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Example Test\",\r\n    \"email\": \"example23@gmail.com\",\r\n    \"password\": \"Asjad@123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -585,12 +599,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/auth/register",
-					"protocol": "http",
+					"raw": "https://resumesystem.onrender.com/api/auth/register",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"resumesystem",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"auth",
@@ -610,7 +625,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\" : \"Final456@gmail.com\",\r\n    \"password\" : \"Asjad@123\"\r\n}",
+					"raw": "{\r\n    \"email\" : \"Live123@gmail.com\",\r\n    \"password\" : \"Asjad@123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -618,12 +633,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/auth/login",
-					"protocol": "http",
+					"raw": "https://resumesystem.onrender.com/api/auth/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"resumesystem",
+						"onrender",
+						"com"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"auth",
