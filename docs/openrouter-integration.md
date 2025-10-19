@@ -8,8 +8,8 @@ The AI Resume Summary Generator has been updated to use OpenRouter's DeepSeek V3
 
 - [Overview](#overview)
 - [Key Features](#key-features)
-  - [🆓 Free DeepSeek V3.1 Model](#-free-deepseek-v31-model)
-  - [🔧 Technical Features](#-technical-features)
+  - [Free DeepSeek V3.1 Model](#-free-deepseek-v31-model)
+  - [ Technical Features](#-technical-features)
 - [Setup Instructions](#setup-instructions)
   - [Get OpenRouter API Key](#1-get-openrouter-api-key)
   - [Environment Configuration](#2-environment-configuration)
