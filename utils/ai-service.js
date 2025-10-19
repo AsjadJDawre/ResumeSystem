@@ -1,10 +1,13 @@
 import { ApiError } from "./api-error.js";
 import OpenAI from "openai";
-
+import dotenv from "dotenv";
+dotenv.config();
 // console.log("OpenRouter API Key:", process.env.OPENROUTER_API_KEY ? "Loaded" : "Missing");
 
 // OpenRouter configuration
-const openRouterApiKey = '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';
+  const openRouterApiKey = process.env.OPENROUTER_API_KEY ;
+// console.log(openRouterApiKey)
+
 
 if (!openRouterApiKey) {
   throw new Error("OPENROUTER_API_KEY not set in environment variables");
