@@ -65,5 +65,8 @@ const PORT = process.env.PORT
 
 
 app.listen(PORT,()=>{
+//   const openRouterApiKey = process.env.OPENROUTER_API_KEY ;
+// console.log(openRouterApiKey)
+
     console.log(`App listening at ${PORT}`)
 })
