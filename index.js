@@ -16,7 +16,7 @@ import skillRoutes from "./routes/skill.routes.js";
 import verifyRoutes from "./routes/verify.routes.js";
 
 const app = express();
-const allowedOrigins = ["http://localhost:5173"]; 
+// const allowedOrigins = ["http://localhost:5173"]; 
 
 // Middlewares
 
@@ -25,11 +25,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: true,
+  credentials: true
 }));
+
+
+
+// cors
+// app.use(cors({
+//   origin: allowedOrigins,
+//   credentials: true,
+//   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
 
 // DB Connection 
 databaseConfig()
