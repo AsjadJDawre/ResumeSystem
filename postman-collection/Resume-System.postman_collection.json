@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "5fdc2cd1-b745-4161-9621-9edbcc595ef5",
+		"name": "Resume-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36200020"
+	},
+	"item": [
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "add-project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Refill Buddy\",\r\n    \"description\": \"An Digital Platform for booking Gas Refill's .\",\r\n    \"technologies\": [\r\n        \"React\",\r\n        \"Node.js\",\r\n        \"MongoDB\",\r\n        \"Express\"\r\n    ],\r\n    \"githubLink\": \"https://github.com/AsjadJDawre/Frontend-RB\",\r\n    \"deployedLink\": \"https://frontend-rb.onrender.com/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Refill Buddy Updated\",\r\n    \"description\": \"Updated description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/projects/68f451b5413264399ef18d93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"projects",
+								"68f451b5413264399ef18d93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/projects/<To.Be-deleted's-ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"projects",
+								"<To.Be-deleted's-ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "achivement",
+			"item": [
+				{
+					"name": "create-achievements",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"IBM certifide\",\r\n  \"type\" : \"course\",\r\n  \"organization\": \"IBM\",\r\n  \"date\": \"2024-03-8\",\r\n  \"description\": \"Successfully Completed IBM course on Cloud Computing.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/achievements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"achievements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-achivement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated IBM Achievement\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/achievements/<To.Be-Update's-ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"achievements",
+								"<To.Be-Update's-ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-achievements",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/achievements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"achievements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-achievements",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/achievements/<To.Be-deleted's-ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"achievements",
+								"<To.Be-deleted's-ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-achievement",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/verify/<type:project,achievement,skill>/<68f21aa72e0d241acc0cbddf-Id for that type particular doc>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"verify",
+								"<type:project,achievement,skill>",
+								"<68f21aa72e0d241acc0cbddf-Id for that type particular doc>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "skills",
+			"item": [
+				{
+					"name": "Add Skills",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Javascript\",\r\n    \"level\": \"intermediate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-skills",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"level\": \"expert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/skills/<To.Be-Updated's-ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"skills",
+								"<To.Be-Updated's-ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-skills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/skills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-skills",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/skills/<To.Be-deleted's-ID>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"skills",
+								"<To.Be-deleted's-ID>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resume",
+			"item": [
+				{
+					"name": "Get Resume",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/resume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-summary",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"summary\": \"A full-stack developer passionate about building scalable apps\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/resume/summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-education",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"education\": [\r\n    {\r\n      \"institute\": \"G.M. Vedak Institute of Technology\",\r\n      \"degree\": \"B.Tech Computer Engineering\",\r\n      \"startYear\": 2021,\r\n      \"endYear\": 2025\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/resume/education",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"education"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-expereince",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"experience\": [\r\n        {\r\n            \"title\": \"Full Stack Developer Intern\",\r\n            \"company\": \"Unified Mentor\",\r\n            \"duration\": \"Sep 2024 - Dec 2024\",\r\n            \"description\": \"Built full-stack web apps using React and Node.js\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/resume/experience",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"experience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-resume-stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/resume/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ai-Summary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/resume/generate-summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"generate-summary"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "preview-aisummary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/resume/preview-summary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"preview-summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Download-resume",
+			"item": [
+				{
+					"name": "Generate-PDF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/resume/pdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"resume",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Final Test\",\r\n    \"email\": \"Final456@gmail.com\",\r\n    \"password\": \"Asjad@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/login",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"Final456@gmail.com\",\r\n    \"password\" : \"Asjad@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
