@@ -15,6 +15,8 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - **Analytics/Insights**: Quick stats of verified/unverified items per user
 - **Resource Optimization**: Prevents server waste by validating data before processing
 - **Robust DX**: `ApiError`, `ApiResponse`, and `asyncHandler` for clean APIs
+- **AI Summary Generator**: OpenRouter-powered professional summary generation based on user data.  
+  > 🔗 **Detailed Guide →** See [OpenRouter DeepSeek Integration](./docs/openrouter-integration.md) for full instructions, outputs, and example requests.
 
 ---
 
@@ -43,6 +45,8 @@ Build modern resumes programmatically. This backend provides secure authenticati
 
 ## 📘 Related Documentation
 - [AI Summary Generation Guide](./docs/ai-summary-generator.md): Detailed explanation of how AI-based summary generation works, request/response structures, and common pitfalls.
+- [OpenRouter DeepSeek Integration](./docs/openrouter-integration.md): Step-by-step guide to integrating OpenRouter DeepSeek V3.1 for AI-powered resume summaries, including example outputs and request formats.
+
 - [System Architecture & Workflow](./docs/system-architecture.md): Visual explanation of backend architecture, data flow, and system components.
 - [External Platform Integration](./docs/external-platform-integration.md): Complete guide to the external platform integration simulation system that auto-updates resumes from learning platforms.
 
