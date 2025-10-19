@@ -61,10 +61,6 @@ app.use(errorMiddleware);
 
 
 const PORT = process.env.PORT
-app.get("/",(req,res)=>{
-    res.status(200).send("Helllo from backend ")
-})
-
 
 
 
