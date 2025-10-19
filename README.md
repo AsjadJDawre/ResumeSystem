@@ -11,6 +11,7 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - **Auto-maintained Resume**: `Resume` embeds arrays of references and updates on every change
 - **AI Summary Generator**: OpenRouter-powered professional summary generation based on user data
 - **PDF Resume Export**: Generate professional, ATS-friendly resume PDFs with dynamic content
+- **External Platform Integration**: Simulated system for auto-updating resumes from external learning platforms
 - **Analytics/Insights**: Quick stats of verified/unverified items per user
 - **Resource Optimization**: Prevents server waste by validating data before processing
 - **Robust DX**: `ApiError`, `ApiResponse`, and `asyncHandler` for clean APIs
@@ -30,12 +31,15 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - [PDF Resume Export](#pdf-resume-export)
 - [Future Scope](#future-scope)
 - [Setup and Run](#setup-and-run)
-
+- [Docker (Local) – Backend + MongoDB](#docker-local--backend--mongodb)
+- [Related Documentation](#-related-documentation)
+- [Conclusion](#conclusion)
 ---
 
 ## 📘 Related Documentation
 - [AI Summary Generation Guide](./docs/ai-summary-generator.md): Detailed explanation of how AI-based summary generation works, request/response structures, and common pitfalls.
 - [System Architecture & Workflow](./docs/system-architecture.md): Visual explanation of backend architecture, data flow, and system components.
+- [External Platform Integration](./docs/external-platform-integration.md): Complete guide to the external platform integration simulation system that auto-updates resumes from learning platforms.
 
 ---
 
@@ -52,6 +56,7 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - Insights: Aggregated counts (verified/unverified)
 - AI Summary: OpenRouter-powered professional summary generation
 - PDF Export: Professional resume PDF generation with dynamic content
+- External Platform Integration: Simulated system for auto-updating resumes from external learning platforms (Internshala, Coursera, Devpost, etc.)
 
 ---
 
@@ -344,9 +349,11 @@ curl -s -b cookiejar.txt -X GET http://localhost:5000/api/resume/pdf \
 
 ### Future Scope
 - Enhanced AI-generated resume summary with multiple templates
-- Integrations: Udemy, Coursera, Hackathons, GitHub activity
+- **Live External Platform Integrations**: Real API connections to Udemy, Coursera, Hackathons, GitHub activity (currently simulated)
 - PDF template customization and multiple layouts
 - Advanced analytics and insights dashboard
+
+> 🔗 **External Platform Integration**: Our system includes a comprehensive simulation of how external learning platforms (Internshala, Coursera, Devpost, HackerEarth, etc.) would automatically update user resumes. This simulation demonstrates the complete architecture for real-time resume updates based on external platform activities. **[View Complete Documentation →](./docs/external-platform-integration.md)**
 
 ---
 

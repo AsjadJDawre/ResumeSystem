@@ -455,3 +455,4 @@ The OpenRouter DeepSeek V3.1 integration provides an excellent free alternative 
 
 The integration maintains full compatibility with existing API endpoints while providing cost-effective AI-powered resume summary generation through OpenRouter's free tier.
 
+
