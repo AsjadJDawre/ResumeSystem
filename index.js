@@ -5,6 +5,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { databaseConfig } from "./DB/database-config.js";
 import { errorMiddleware } from "./middlewares/error.middleware.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 
 // Route Imports
@@ -29,6 +31,11 @@ app.use(cors({
   credentials: true
 }));
 
+// Static assets
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, "public")));
+
 
 
 // cors
@@ -42,9 +49,9 @@ app.use(cors({
 // DB Connection 
 databaseConfig()
 
-// Base Route
+// Base Route - serve landing page
 app.get("/", (req, res) => {
-  res.send("Resume System Backend Running...");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // API Routes
