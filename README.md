@@ -28,6 +28,11 @@ Build modern resumes programmatically. This backend provides secure authenticati
 - [Error and Response Handling](#error-and-response-handling)
 - [Verification System](#verification-system)
 - [Resume Insights Endpoint](#resume-insights-endpoint)
+- [Usage](#usage-example)
+  - [How to Use the System](#how-to-use-the-system)
+
+  - [Postman Collection for Testing](#postman-collection-for-testing)
+
 - [PDF Resume Export](#pdf-resume-export)
 - [Future Scope](#future-scope)
 - [Setup and Run](#setup-and-run)
@@ -326,12 +331,48 @@ The system includes a professional PDF resume generator that creates ATS-friendl
 
 ![Professional Resume PDF Sample](./docs/test_output/pdf-generated-output.png)
 
-**Usage Example(OR Use POSTMAN Preferred)**:
-```bash
-# Generate and download resume PDF
-curl -s -b cookiejar.txt -X GET http://localhost:5000/api/resume/pdf \
-  -o "my-resume.pdf"
+##  Usage-Example**:
+### How to Use the System
+
+The recommended flow to use the External Platform Integration System is as follows:
+
+1. **Register a User**  
+   Create a new account via `/auth/register`.
+
+2. **Login**  
+   Authenticate using `/auth/login` to obtain an httpOnly cookie or JWT for subsequent requests.
+
+3. **Use API Endpoints**  
+   - Create, update, delete **Projects**, **Achievements**, and **Skills**.
+   - Update and fetch **Resume** (`/resume` endpoints).
+   - Verify items using `/verify/:type/:id`.
+   - Generate **AI Summary** and **PDF Resume**.
+
+4. **Test the Flow**  
+   Use the Postman collection provided for a reproducible testing experience.
+
+```mermaid
+flowchart TD
+    A[Register User] --> B[Login]
+    B --> C[Create/Update/Delete Projects/Achievements/Skills]
+    C --> D[Update Resume / Generate Summary / PDF]
+    D --> E[Verify Items if Required]
+    E --> F[Fetch Resume / Resume Insights]
 ```
+
+### Postman Collection for Testing
+
+A ready-to-use Postman collection is provided in `postman-collection/`.
+
+> ⚠️ **Recommended Testing:** Use this collection to test all endpoints and workflows of the External Platform Integration System. It contains **pre-filled request bodies, URLs, and headers** that match the sample data in this documentation. This ensures results are reproducible and closely align with the developer’s environment.
+
+**Usage:**
+
+1. Open Postman.
+2. Import the collection from the `postman-collection/` folder.
+3. Run requests in the order provided to simulate real data flows.
+4. Verify responses against the outputs in the **Sample Output** section.
+
 
 **Response Headers**:
 - `Content-Type: application/pdf`
