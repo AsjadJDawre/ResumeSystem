@@ -415,7 +415,7 @@ Environment
 Create a `.env` file:
 ```bash
 PORT=5000
-DB_URL=mongodb://localhost:27017
+DB_URL=mongodb://localhost:27017 or MongoDb Atlas Url 
 DB_Name=resumesys
 JWT_SECRET=supersecretkey
 OPENROUTER_API_KEY=your_openrouter_api_key_here
