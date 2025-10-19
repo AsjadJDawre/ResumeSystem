@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume System – Backend Web Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Resume System – Backend Web Service</h1>
+      <p class="subtitle">This is a backend-focused Node.js + Express project for managing resumes.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Project Overview</h2>
+      <div class="project-description">
+        <p>The Resume System is a Node.js-based backend platform that automates resume creation, updates, and verification. My approach focused on building a secure, scalable, and intelligent system to keep resumes dynamic and accurate.</p>
+        <p>It includes JWT authentication, real-time resume updates, AI-generated summaries, PDF export, and simulated integrations with learning and internship platforms. The system ensures data authenticity through verification and maintains clean, consistent API responses.</p>
+        <h3>Development Approach:</h3>
+        <p>Built using a modular architecture emphasizing data integrity, security, and maintainability. Routes and controllers were organized for scalability and clarity.</p>
+        <h3>Future Improvements:</h3>
+        <p>Planned enhancements include automated testing with Jest, CI/CD integration via GitHub Actions, and a React frontend for a full-stack experience.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Key Features</h2>
+      <ul class="project-description">
+        <li>JWT Auth: Register/Login with hashed passwords and stateless tokens</li>
+        <li>Modular CRUD: Projects, Achievements, Skills with verification flags</li>
+        <li>Auto-maintained Resume: Resume embeds arrays of references and updates on every change</li>
+        <li>AI Summary Generator: OpenRouter-powered professional summary generation based on user data</li>
+        <li>PDF Resume Export: Generate professional, ATS-friendly resume PDFs with dynamic content</li>
+        <li>External Platform Integration: Simulated system for auto-updating resumes from external learning platforms</li>
+        <li>Analytics/Insights: Quick stats of verified/unverified items per user</li>
+        <li>Resource Optimization: Prevents server waste by validating data before processing</li>
+        <li>Robust DX: ApiError, ApiResponse, and asyncHandler for clean APIs</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Project Links</h2>
+      <ul class="link-list">
+        <li>
+          <a class="link" href="https://resumesystem.onrender.com" target="_blank" rel="noopener noreferrer">
+            Live site
+          </a>
+        </li>
+        <li>
+          <a class="link" href="https://github.com/AsjadJDawre/ResumeSystem" target="_blank" rel="noopener noreferrer">
+            GitHub Repository
+          </a>
+        </li>
+        <li>
+          <a class="link" href="https://drive.google.com/file/d/18HtlJXu67Mp1pJ1ir_qqVhTkPKENSVDK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            Documentation (PDF)
+          </a>
+        </li>
+        <li>
+          <a class="link" href="https://www.linkedin.com/in/asjad-johar/" target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> · Made by Asjad Johar Dawre</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
