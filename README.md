@@ -74,12 +74,12 @@ High-level flow: client → REST API → controllers → services/model ops → 
 
 ```mermaid
 flowchart LR
-  Client -->|HTTPS JSON| Express
-  Express -->|Routes| Controllers
-  Controllers -->|Mongoose| MongoDB[(MongoDB)]
-  Controllers -->|ApiResponse| Client
-  Controllers -->|throw ApiError| ErrorMW[Error Middleware]
-  ErrorMW --> Client
+    Client -->|HTTPS JSON| Express
+    Express -->|Routes| Controllers
+    Controllers -->|Mongoose| MongoDB[(MongoDB)]
+    Controllers -->|ApiResponse| Client
+    Controllers -->|throw ApiError| ErrorMW[Error Middleware]
+    ErrorMW --> Client
 ```
 
 Tech stack:
@@ -106,53 +106,53 @@ Relationships: `User` 1—1 `Resume`; `Resume` holds refs to `Project`, `Achieve
 
 ```mermaid
 erDiagram
-  User ||--|| Resume : owns
-  Resume }o--o{ Project : references
-  Resume }o--o{ Achievement : references
-  Resume }o--o{ Skill : references
+    User ||--|| Resume : owns
+    Resume }o--o{ Project : references
+    Resume }o--o{ Achievement : references
+    Resume }o--o{ Skill : references
 
-  User {
-    ObjectId _id
-    string name
-    string email
-    string password
-    string role
-    date createdAt
-  }
-  Resume {
-    ObjectId user
-    string summary
-    Education[] education
-    Experience[] experience
-    ObjectId[] projects
-    ObjectId[] achievements
-    ObjectId[] skills
-    date updatedAt
-  }
-  Project {
-    ObjectId user
-    string title
-    string description
-    string[] technologies
-    string githubLink
-    string liveLink
-    bool verified
-    date createdAt
-  }
-  Achievement {
-    ObjectId user
-    enum type
-    string title
-    string organization
-    string certificateLink
-    bool verified
-    date date
-  }
-  Skill {
-    ObjectId user
-    string name
-    enum level
-  }
+    User {
+        ObjectId _id
+        string name
+        string email
+        string password
+        string role
+        date createdAt
+    }
+    Resume {
+        ObjectId user
+        string summary
+        Education[] education
+        Experience[] experience
+        ObjectId[] projects
+        ObjectId[] achievements
+        ObjectId[] skills
+        date updatedAt
+    }
+    Project {
+        ObjectId user
+        string title
+        string description
+        string[] technologies
+        string githubLink
+        string liveLink
+        bool verified
+        date createdAt
+    }
+    Achievement {
+        ObjectId user
+        enum type
+        string title
+        string organization
+        string certificateLink
+        bool verified
+        date date
+    }
+    Skill {
+        ObjectId user
+        string name
+        enum level
+    }
 ```
 
 ---
@@ -234,17 +234,16 @@ Verification (requires auth; typically elevated role)
 
 ```mermaid
 sequenceDiagram
-  participant C as Client
-  participant A as /api/auth/login
-  participant M as verifyJWT
-  participant S as Secured Route
+    participant C as Client
+    participant A as /api/auth/login
+    participant M as verifyJWT
+    participant S as Secured Route
 
-  C->>A: email/password
-  A-->>C: Set-Cookie accessToken (HttpOnly)
-  C->>M: Request with cookie accessToken
-  M-->>S: req.user hydrated
-  S-->>C: data
-
+    C->>A: email/password
+    A-->>C: Set-Cookie accessToken (HttpOnly)
+    C->>M: Request with cookie accessToken
+    M-->>S: req.user hydrated
+    S-->>C: data
 ```
 
 ---
@@ -258,15 +257,15 @@ When creating/updating/deleting a Project/Achievement/Skill:
 Example lifecycle (create project):
 ```mermaid
 sequenceDiagram
-  participant C as Client
-  participant P as POST /api/projects
-  participant R as Resume
-  participant DB as MongoDB
+    participant C as Client
+    participant P as POST /api/projects
+    participant R as Resume
+    participant DB as MongoDB
 
-  C->>P: {title, ...}
-  P->>DB: Project.create
-  P->>R: Resume.findOneAndUpdate($push: projectId, $set: updatedAt)
-  P-->>C: 201 ApiResponse(project)
+    C->>P: {title, ...}
+    P->>DB: Project.create
+    P->>R: Resume.findOneAndUpdate($push: projectId, $set: updatedAt)
+    P-->>C: 201 ApiResponse(project)
 ```
 
 ---
@@ -356,7 +355,7 @@ The recommended flow to use the External Platform Integration System is as follo
    Use the Postman collection provided for a reproducible testing experience.
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[Register User] --> B[Login]
     B --> C[Create/Update/Delete Projects/Achievements/Skills]
     C --> D[Update Resume / Generate Summary / PDF]
