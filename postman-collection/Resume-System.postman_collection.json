@@ -54,7 +54,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://resumesystem.onrender.com/api/projects/68f47aceda3df5d8e518879f",
+							"raw": "https://resumesystem.onrender.com/api/projects/<project-To-Be-updated's-ID>",
 							"protocol": "https",
 							"host": [
 								"resumesystem",
@@ -64,7 +64,7 @@
 							"path": [
 								"api",
 								"projects",
-								"68f47aceda3df5d8e518879f"
+								"<project-To-Be-updated's-ID>"
 							]
 						}
 					},
