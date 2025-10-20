@@ -98,50 +98,30 @@ pre {
   overflow-x: auto;
   color: var(--text);
 }
-
-/* Sidebar Styles */
-.sidebar-links {
-  position: fixed;
-  top: 33%; /* below header */
-  right: 8%;
-  width: 210px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.sidebar-links h3 {
-  margin-bottom: 12px;
-  color: var(--accent);
-  font-size: 18px;
-}
-
-.sidebar-list {
-  list-style: none;
-  padding: 0;
+/* Horizontal Project Links */
+.project-links {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.sidebar-list a {
+.project-links a {
   text-decoration: none;
   color: var(--text);
   background: linear-gradient(180deg, rgba(79,140,255,0.08), rgba(79,140,255,0));
   border: 1px solid var(--border);
-  padding: 8px 12px;
+  padding: 8px 14px;
   border-radius: 8px;
-  display: block;
   transition: all 0.15s ease;
 }
 
-.sidebar-list a:hover {
+.project-links a:hover {
   border-color: var(--accent);
   box-shadow: 0 6px 16px rgba(79,140,255,0.25);
   transform: translateY(-1px);
 }
+
 
 .site-footer {
   border-top: 1px solid var(--border);
