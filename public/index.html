@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume System – Backend Web Service</title>
+  <title>ResumeSystem – Backend API Service</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,19 +12,35 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <h1>Resume System – Backend Web Service</h1>
-      <p class="subtitle">This is a backend-focused Node.js + Express project for managing resumes.</p>
+      <h1>ResumeSystem – Backend API Service</h1>
+      <p class="subtitle">A Node.js + Express backend API for managing resumes programmatically. Not a frontend UI.</p>
     </div>
   </header>
 
+  <!-- Right Sidebar for Project Links -->
+  <div class="sidebar-links">
+    <h3>Project Links</h3>
+    <ul class="sidebar-list">
+      <li><a href="https://resumesystem.onrender.com" target="_blank">Live API Endpoint</a></li>
+      <li><a href="https://github.com/AsjadJDawre/ResumeSystem" target="_blank">GitHub Repository</a></li>
+      <li><a href="https://drive.google.com/file/d/18HtlJXu67Mp1pJ1ir_qqVhTkPKENSVDK/view?usp=sharing" target="_blank">Documentation (PDF)</a></li>
+      <li><a href="https://www.linkedin.com/in/asjad-johar/" target="_blank">LinkedIn Profile</a></li>
+    </ul>
+  </div>
+
   <main class="container">
+    <div class="notice">
+      ⚠️ This project is a backend REST API. Use API routes like 
+      <code>https://resumesystem.onrender.com/api/auth/login</code> to interact programmatically.
+    </div>
+
     <section class="card">
       <h2>Project Overview</h2>
       <div class="project-description">
-        <p>The Resume System is a Node.js-based backend platform that automates resume creation, updates, and verification. My approach focused on building a secure, scalable, and intelligent system to keep resumes dynamic and accurate.</p>
+        <p>ResumeSystem is a <strong>backend-first Node.js platform</strong> that automates resume creation, updates, and verification. This project focuses on building a secure, scalable, and intelligent system for dynamic and accurate resume management.</p>
         <p>It includes JWT authentication, real-time resume updates, AI-generated summaries, PDF export, and simulated integrations with learning and internship platforms. The system ensures data authenticity through verification and maintains clean, consistent API responses.</p>
         <h3>Development Approach:</h3>
-        <p>Built using a modular architecture emphasizing data integrity, security, and maintainability. Routes and controllers were organized for scalability and clarity.</p>
+        <p>Built using a modular architecture emphasizing data integrity, security, and maintainability. Routes and controllers are organized for scalability and clarity.</p>
         <h3>Future Improvements:</h3>
         <p>Planned enhancements include automated testing with Jest, CI/CD integration via GitHub Actions, and a React frontend for a full-stack experience.</p>
       </div>
@@ -35,40 +51,23 @@
       <ul class="project-description">
         <li>JWT Auth: Register/Login with hashed passwords and stateless tokens</li>
         <li>Modular CRUD: Projects, Achievements, Skills with verification flags</li>
-        <li>Auto-maintained Resume: Resume embeds arrays of references and updates on every change</li>
-        <li>AI Summary Generator: OpenRouter-powered professional summary generation based on user data</li>
-        <li>PDF Resume Export: Generate professional, ATS-friendly resume PDFs with dynamic content</li>
-        <li>External Platform Integration: Simulated system for auto-updating resumes from external learning platforms</li>
+        <li>Auto-maintained Resume: Resume updates on every data change</li>
+        <li>AI Summary Generator: OpenRouter-powered professional summary generation</li>
+        <li>PDF Resume Export: Generate ATS-friendly resume PDFs dynamically</li>
+        <li>External Platform Integration: Simulated updates from learning platforms</li>
         <li>Analytics/Insights: Quick stats of verified/unverified items per user</li>
-        <li>Resource Optimization: Prevents server waste by validating data before processing</li>
+        <li>Resource Optimization: Validates data before processing to prevent server waste</li>
         <li>Robust DX: ApiError, ApiResponse, and asyncHandler for clean APIs</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Project Links</h2>
-      <ul class="link-list">
-        <li>
-          <a class="link" href="https://resumesystem.onrender.com" target="_blank" rel="noopener noreferrer">
-            Live site
-          </a>
-        </li>
-        <li>
-          <a class="link" href="https://github.com/AsjadJDawre/ResumeSystem" target="_blank" rel="noopener noreferrer">
-            GitHub Repository
-          </a>
-        </li>
-        <li>
-          <a class="link" href="https://drive.google.com/file/d/18HtlJXu67Mp1pJ1ir_qqVhTkPKENSVDK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            Documentation (PDF)
-          </a>
-        </li>
-        <li>
-          <a class="link" href="https://www.linkedin.com/in/asjad-johar/" target="_blank" rel="noopener noreferrer">
-            LinkedIn Profile
-          </a>
-        </li>
-      </ul>
+      <h2>Quick API Demo</h2>
+      <pre>
+curl -X POST https://resumesystem.onrender.com/api/auth/register \
+-H "Content-Type: application/json" \
+-d '{"name":"Asjad","email":"test@example.com","password":"123456"}'
+      </pre>
     </section>
   </main>
 
