@@ -7,6 +7,15 @@ Build modern resumes programmatically. This backend provides secure authenticati
 
 >⚠️ Note: A ready-to-use Postman collection is included in postman-collection/ to help you quickly reproduce the testing environment. Simply download and import the collection into >Postman (or any API client) and send requests with Body → raw → JSON for seamless testing.
 
+## 🚀 Live API Base URL for Testing (Render Deployment)
+
+**Base URL:** `https://resumesystem.onrender.com/api`
+
+**Example:** Register User →  
+`POST https://resumesystem.onrender.com/api/auth/register`
+
+
+
 ### Key Features
 - **JWT auth**: Register/Login with hashed passwords and stateless tokens
 - **Modular CRUD**: Projects, Achievements, Skills with verification flags
